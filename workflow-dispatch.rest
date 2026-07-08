@@ -1,0 +1,11 @@
+POST https://github.com/Patchakl/gh-action-demo/dispatch
+Content-Type: application/json
+Accept: application/vnd.github+json
+Authorization: Bearer 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
+
+{
+    "event_type": "after_render_cms",
+    "client_payload": {
+        "status": "completed"
+    }
+}
