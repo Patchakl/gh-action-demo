@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Github Variable
+        if: ${{ runner.os == 'linux'  }}
         env:
           APP_VERSION: "2.34.5"
           RUNNER_CONTEXT: ${{ toJson(runner) }}
