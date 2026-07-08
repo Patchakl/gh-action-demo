@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Github Variable
-        if: ${{ runner.os == 'linux'  }}
+        if: ${{ runner.os == 'Linux'  }}
         env:
           APP_VERSION: "2.34.5"
           RUNNER_CONTEXT: ${{ toJson(runner) }}
@@ -46,4 +46,4 @@ jobs:
     needs: hello-job
     steps:
       - run: echo "This job is running on ${{ runner.os }}"
-        if: ${{ runner.os == 'linux' }}
+        if: ${{ runner.os == 'Linux' }}
