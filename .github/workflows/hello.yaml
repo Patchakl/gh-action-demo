@@ -6,8 +6,9 @@ on:
       - ".github/workflows/*"
   pull_request:
     branches: [main]
+    
   workflow_dispatch:
-    types: ["after_render_cms"]
+    
 jobs:
   hello-job:
     runs-on: ubuntu-latest
