@@ -1,7 +1,0 @@
-on: push
-jobs:
-  hello-job:
-    runs-on: ubuntu-lastest
-    steps:
-     - name: Run a one-line script
-       run: echo 'Hello Github Actions!"
