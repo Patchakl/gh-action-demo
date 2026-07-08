@@ -1,7 +1,7 @@
 name: Workflow for Feature Branch
 on:
   push:
-    branches: : [feature/**]
+    branches: [feature/**]
   jobs:
     Build:
       runs-on: ubuntu-lastest
