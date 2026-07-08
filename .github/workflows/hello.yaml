@@ -16,7 +16,6 @@ jobs:
     steps:
      - name: Run a one-line script
        run: echo "Hello Github Actions!"
-       
   Second-job:
     runs-on: windows-latest
     needs: hello-job
