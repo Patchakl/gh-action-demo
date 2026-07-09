@@ -1,0 +1,32 @@
+on:
+  workflow_dispatch: :
+    inputs:
+      environment:
+        description: 'Target Environment'
+        required: true
+        type: choice
+        options:
+          - "Staging"
+          - "Production"
+      run_ui_tests:
+        description: 'Run UI testing'
+        required: true
+        type: boolean
+        default: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v7.0.0
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+      - name: List files in workspace
+        run: ls ${{ github.workspace }}
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: UI Testing
+      if: ${{ input.run_ui_tests }}
+      run: echo "Run UI testing tools in ${{ input.environment }} environment"
