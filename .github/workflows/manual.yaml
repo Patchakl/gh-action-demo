@@ -28,5 +28,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: UI Testing
-        if: ${{ input.run_ui_tests }}
-        run: echo "Run UI testing tools in ${{ input.environment }} environment"
+        if: ${{ inputs.run_ui_tests }}
+        run: echo "Run UI testing tools in ${{ inputs.environment }} environment"
